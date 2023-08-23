@@ -3,4 +3,4 @@ export const darkGray = "#444";
 export const lightGray = "#999";
 export const light = "#ededed";
 
-export const backendLink = "http://192.168.29.187:8000";
+export const backendLink = "https://blobs-app.onrender.com";
