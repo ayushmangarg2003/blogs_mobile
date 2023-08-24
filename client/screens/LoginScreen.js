@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { backendLink, dark, darkGray, light } from '../constants/constants'
+import { backendLink, dark, darkGray, light, error } from '../constants/constants'
 import { Button, TextInput } from '@react-native-material/core'
 import axios from 'axios'
 
@@ -13,9 +13,9 @@ const LoginScreen = () => {
     const [password, setPassword] = useState('')
     const [error, setError] = useState(null);
 
-    const handleLogin = () => {
+    const handleLogin = async() => {
         const user = { email: email, password: password }
-        axios.post(`${backendLink}/api/auth/login`, user)
+        await axios.post(`${backendLink}/api/auth/login`, user)
             .then((response) => {
                 setEmail("");
                 setPassword("");
@@ -42,7 +42,7 @@ const LoginScreen = () => {
 
                             <TextInput value={password} onChangeText={(text) => setPassword(text)} placeholder='Password' secureTextEntry={true} color={dark} style={{ marginHorizontal: 8, marginVertical: 8 }} />
                             <Button onPress={handleLogin} title="Login" backgroundColor={dark} style={{ marginHorizontal: 8, padding: 8, marginTop: 8 }} />
-                            <Text style={{ color: 'red', textAlign: 'center', marginTop: 4 }}>{error}</Text>
+                            <Text style={{ color: {error}, textAlign: 'center', marginTop: 4 }}>{error}</Text>
 
                         </View>
                         <View>

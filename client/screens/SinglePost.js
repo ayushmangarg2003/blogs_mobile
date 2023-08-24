@@ -3,7 +3,7 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen'
 import { ChevronLeftIcon } from 'react-native-heroicons/outline';
-import { darkGray, light } from '../constants/constants';
+import { darkGray, dark, light } from '../constants/constants';
 
 const SinglePost = ({ route }) => {
   const Capitalize = (str) => {
@@ -23,18 +23,18 @@ const SinglePost = ({ route }) => {
             }}
           />
         </View>
-        <View style={{ padding: 16, borderTopLeftRadius: 35, borderTopRightRadius: 35, position: 'relative', top: -28, backgroundColor:'#ededed' }}>
+        <View style={{ padding: 16, borderTopLeftRadius: 35, borderTopRightRadius: 35, position: 'relative', top: -28, backgroundColor: { light } }}>
           <Text style={{ textAlign: 'center', fontStyle: 'italic' }}>{author}</Text>
           <Text style={{
             fontSize: widthPercentageToDP(5.5),
-            color: '#111',
+            color: { dark },
             fontWeight: '600',
             marginTop: 16,
             textAlign: 'center'
           }}>{Capitalize(title)}</Text>
           <Text style={{
             fontSize: widthPercentageToDP(4),
-            color: {darkGray},
+            color: { darkGray },
             fontWeight: '400',
             marginTop: 24,
             textAlign: 'justify'
@@ -50,7 +50,7 @@ const SinglePost = ({ route }) => {
           height: widthPercentageToDP(16),
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: "#151515",
+          backgroundColor: {dark},
           position: 'absolute',
           bottom: 10,
           right: 10,

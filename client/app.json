@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "client",
+    "name": "BlogSPACE",
     "slug": "client",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.ayushmangarg.client"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "58d9f5e3-c013-4470-a5c7-517a3008b9c3"
+      }
     }
   }
 }

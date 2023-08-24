@@ -3,6 +3,7 @@ import React from 'react'
 import { LinearGradient } from 'expo-linear-gradient'
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 import { useNavigation } from '@react-navigation/native';
+import { light } from '../constants/constants';
 
 const blog = (props) => {
     const navigation = useNavigation('')
@@ -58,7 +59,7 @@ const blog = (props) => {
                 numberOfLines={2}
                 style={{
                     fontSize: widthPercentageToDP(4.5),
-                    color: '#fff',
+                    color: { light },
                     fontWeight: '600',
                     marginBottom: 8,
                 }}>{props.title}</Text>
@@ -67,7 +68,7 @@ const blog = (props) => {
                 style={{
                     fontSize: widthPercentageToDP(3),
                     fontWeight: '400',
-                    color: '#fff'
+                    color: { light }
                 }}>{props.desc}</Text>
 
         </TouchableOpacity>

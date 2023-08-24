@@ -1,14 +1,13 @@
 import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context';
-
 import { Button } from "@react-native-material/core";
-
 import React, { useState } from 'react';
 import Blog from "../components/Blog"
 import { useNavigation } from '@react-navigation/native';
 import { backendLink, dark } from "../constants/constants"
 import { heightPercentageToDP } from 'react-native-responsive-screen';
 import axios from 'axios';
+
 const HomeScreen = () => {
     const navigation = useNavigation()
     const [data, setData] = useState([])

@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { Button, TextInput } from '@react-native-material/core';
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
-import { dark, backendLink, light } from '../constants/constants';
+import { darkGray, dark, backendLink, light } from '../constants/constants';
 import axios from 'axios';
 import { ChevronLeftIcon } from 'react-native-heroicons/outline';
 
@@ -46,11 +46,11 @@ const CreatePost = () => {
                             height: widthPercentageToDP(10),
                             justifyContent: 'center',
                             alignItems: 'center',
-                            backgroundColor: "#151515",
+                            backgroundColor: '#151515',
                             zIndex: 100
                         }}
                     >
-                        <ChevronLeftIcon size={widthPercentageToDP(7)} strokeWidth={4} color={light} />
+                        <ChevronLeftIcon size={widthPercentageToDP(5.5)} strokeWidth={3} color={light} />
                     </TouchableOpacity>
                     <Text style={{ fontSize: 18, fontWeight: 700 }}>Create New Post</Text>
                 </View>
@@ -59,14 +59,14 @@ const CreatePost = () => {
                         value={title}
                         onChangeText={(text) => setTitle(text)}
                         maxLength={50}
-                        color='#111'
+                        color={dark}
                         placeholder='Title'
                         style={{ marginBottom: 20 }} />
                     <TextInput
                         value={writer}
                         onChangeText={(text) => setWriter(text)}
                         maxLength={50}
-                        color='#111'
+                        color={dark}
                         placeholder='Publisher'
                         style={{ marginBottom: 20 }} />
                     <TextInput
@@ -76,13 +76,13 @@ const CreatePost = () => {
                         multiline
                         placeholder='Content'
                         numberOfLines={12}
-                        color='#111'
+                        color={dark}
                         style={{ marginBottom: 20 }}
                     />
                     <TextInput
                         value={image}
                         onChangeText={(text) => setImage(text)}
-                        color='#111'
+                        color={dark}
                         placeholder='Image URL'
                         style={{ marginBottom: 20 }} />
                 </View>

@@ -2,8 +2,8 @@ import { Alert, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { backendLink, dark, darkGray, light } from '../constants/constants'
-import { Button, Snackbar, TextInput } from '@react-native-material/core'
+import { backendLink, dark, darkGray, light, error } from '../constants/constants'
+import { Button, TextInput } from '@react-native-material/core'
 import axios from 'axios'
 
 const RegisterScreen = () => {
@@ -54,7 +54,7 @@ const RegisterScreen = () => {
 
               <Button onPress={handleRegister} title="Register" backgroundColor={dark} style={{ marginHorizontal: 8, padding: 8, marginTop: 8 }} />
 
-              <Text style={{color:'red', textAlign:'center', marginTop:4}}>{error}</Text>
+              <Text style={{color:{error}, textAlign:'center', marginTop:4}}>{error}</Text>
             </View>
 
             <View>
